@@ -17,9 +17,10 @@
     <title>Modal Window</title>
   </head>
   <body style="background: #ddd">
-
-      
+      <div class="main_window"> 
+          <div class="modal-content" style="border: 0px;">
       <div class="container">
+          
                     <div class="row justify-content-center">
                         <div class="col-lg-3">
                             
@@ -40,15 +41,16 @@
                         </div>
                     </div>
                   </div>
+          </div>
       
-      
+    </div>
       
       
       
 
       <div id="modal-02">
             
-            <div  id="btn-close-modal" class="close-modal-02"> 
+            <div  id="btn-close-modal" class="close-modal-02 cl"> 
                 <center>close</center>
             </div>
             <div class="modal-content" style="background: #3498db; border: 0px;">
@@ -78,7 +80,7 @@
       
       
       <div id="modal-0_0">
-            <div  id="btn-close-modal" class="close-modal-0_0"> 
+            <div  id="btn-close-modal" class="close-modal-0_0 cl"> 
                 <center>close</center>
             </div>
             <div class="modal-content" style="background: #ff98db; border: 0px;">
@@ -99,6 +101,10 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-5">
                             <p class="lang" key="text_0" id="ru_0" style="margin-top: 100px;">Подборка лекций от экспертов со всего мира о важности финансовой грамотности и умении распоряжаться личными средствами. Кейт Чен: «Может ли язык влиять на способность делать сбережения?» Экономист-бихевиорист Кейт Чен рассказывает о том, как важно думать о будущем, будто бы оно уже наступило. Согласно его исследованиям, люди, в чьем языке нет будущего времени...     Подборка лекций от экспертов со всего мира о важности финансовой грамотности и умении распоряжаться личными средствами. Кейт Чен: «Может ли язык влиять на способность делать сбережения?» Экономист-бихевиорист Кейт Чен рассказывает о том, как важно думать о будущем, будто бы оно уже наступило. Согласно его исследованиям, люди, в чьем языке нет будущего времени... </p>
+                            <br>
+                    <br>
+                    <br><center><a id="dem_0000" href="#main_window" href="#animatedModal" class="dir-cont">exit</a></center>
+                            
                         </div>
                         <div class="col-lg-6">
                             <div class="container">
@@ -120,6 +126,9 @@
                                 </div>
                         </div>                        
                     </div>
+                    
+                    
+                    
                 </div>   
             </div>
         </div>
@@ -170,16 +179,42 @@
                 });
           
           
+          
           $("#dem-4-direct_0").animatedModal({
                 animatedIn:'bounceIn',
                 animatedOut:'bounceOutDown',
                 color:'#ff98db'
-            });
-          
+            });          
             baguetteBox.run('.baguette', {
                 animation: 'fadeIn',
                 noScrollbars: true
             });
+      </script>
+      <script>
+            idleTimer = null;
+            idleState = false; // состояние отсутствия
+            idleWait = 10000; // время ожидания в мс. (1/1000 секунды)
+
+            $(document).ready( function(){
+              $(document).bind('mousemove keydown scroll', function(){
+                clearTimeout(idleTimer); // отменяем прежний временной отрезок
+                if(idleState == true){ 
+                  // Действия на возвращение пользователя
+                }
+
+                idleState = false;
+                idleTimer = setTimeout(function(){ 
+                  // Действия на отсутствие пользователя
+                    $(".cl").click();
+                    $(".cl").click();
+                    
+                    
+                    
+                  idleState = true; 
+                }, idleWait);
+              });
+});
+      
       </script>
       
       
