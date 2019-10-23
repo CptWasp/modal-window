@@ -92,32 +92,32 @@
                         </div>
                     </div>
                   </div>
+                <br>
+                <br>
+                <br>
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-lg-6">
-<!--                            text-->
+                        <div class="col-lg-5">
+                            <p class="lang" key="text_0" id="ru_0" style="margin-top: 100px;">Подборка лекций от экспертов со всего мира о важности финансовой грамотности и умении распоряжаться личными средствами. Кейт Чен: «Может ли язык влиять на способность делать сбережения?» Экономист-бихевиорист Кейт Чен рассказывает о том, как важно думать о будущем, будто бы оно уже наступило. Согласно его исследованиям, люди, в чьем языке нет будущего времени...     Подборка лекций от экспертов со всего мира о важности финансовой грамотности и умении распоряжаться личными средствами. Кейт Чен: «Может ли язык влиять на способность делать сбережения?» Экономист-бихевиорист Кейт Чен рассказывает о том, как важно думать о будущем, будто бы оно уже наступило. Согласно его исследованиям, люди, в чьем языке нет будущего времени... </p>
                         </div>
                         <div class="col-lg-6">
                             <div class="container">
+                                <div class=" baguette" >
 
+                                         <div class="thumbnail">
+                                             <a class="lightbox" href="http://bootstraptema.ru/images/demo/1920x1080/demo4.jpg" >
+                                                <img src="http://bootstraptema.ru/images/demo/1920x1080/demo4.jpg" alt="">
+                                             </a>
+                                         </div>
 
+                                        <div class="thumbnail">
+                                         <a class="lightbox" href="http://bootstraptema.ru/images/demo/1920x1080/demo5.jpg">
+                                            <img src="http://bootstraptema.ru/images/demo/1920x1080/demo5.jpg" alt="">
+                                         </a>
+                                        </div>
 
-<div class="row baguette">
-
-         <div class="thumbnail">
-             <a class="lightbox" href="http://bootstraptema.ru/images/demo/1920x1080/demo4.jpg">
-                <img src="http://bootstraptema.ru/images/demo/1920x1080/demo4.jpg" alt="">
-             </a>
-         </div>
-
-        <div class="thumbnail">
-         <a class="lightbox" href="http://bootstraptema.ru/images/demo/1920x1080/demo5.jpg">
-            <img src="http://bootstraptema.ru/images/demo/1920x1080/demo5.jpg" alt="">
-         </a>
-        </div>
-
-</div><!-- /.row baguette -->
-</div><!-- /.container -->
+                                </div>
+                                </div>
                         </div>                        
                     </div>
                 </div>   
@@ -134,20 +134,9 @@
 <!--    <script src="js/jquery-3.4.1.js"></script>-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>      
     <script>
-//            $.ajax({
-//                url: 'data.json',
-//                dataType: 'json',
-//                type: 'post',
-//                cache: 'true',
-//                success: function(data){
-//                   console.log(data);
-        
         $.getJSON('data.json', function(data){
                     console.log(data);
-                    var arr = data;
-                        
-                        
-                        
+                    var arr = data;    
                     $(".lang-container").click(function(){
                         var lang = $(this).attr("id");
                         $(".lang-container").attr("style", "");
@@ -156,12 +145,22 @@
                             $(this).text(arr[lang][$(this).attr("key")]);
                         });
                     });
-//        Надо доделать перевод 2й, 3й и 4й страницы и загружать json, а не использовать массив
-//                }
-//            });
         });
-        
     </script>
+      <script>
+          $.getJSON('lorem_text.json', function(data){
+                    console.log(data);
+                    var arr = data;    
+                    $(".lang-container").click(function(){
+                        var lang = $(this).attr("id");
+                        $(".lang-container").attr("style", "");
+                        $(this).css("box-shadow", "0px 10px 20px 1px #333");
+                        $(".lang").each(function(index, element){
+                            $(this).text(arr[lang][$(this).attr("key")]);
+                        });
+                    });
+        });
+      </script>
       <script src="js/animatedModal.js"></script>
       <script>
                $("#demo02").animatedModal({
