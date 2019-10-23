@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/font.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.2/baguetteBox.min.js"></script>
+      
+      
+      
+    <title>Modal Window</title>
+  </head>
+  <body style="background: #ddd">
+
+      
+      <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3">
+                            
+                            <button key="view" href="#modal-02" href="#animatedModal" class="lang" id="demo02">просмотр</button>
+                        </div>
+                    </div>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="container" style="height: 100%; padding-bottom: 100px;">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4">
+                            <button class="lang-container" id="ru">ru</button>
+                            <button class="lang-container" id="tat">tat</button>
+                            <button class="lang-container" id="en">en</button>
+
+                        </div>
+                    </div>
+                  </div>
+      
+      
+      
+      
+      
+
+      <div id="modal-02">
+            
+            <div  id="btn-close-modal" class="close-modal-02"> 
+                <center>close</center>
+            </div>
+            <div class="modal-content" style="background: #3498db; border: 0px;">
+                <div class="container" style="height: 100%">
+                    <div class="row justify-content-center">
+                        <div class="offset-lg-4 col-lg-4">
+                            <button class="lang-container" id="ru">ru</button>
+                            <button class="lang-container" id="tat">tat</button>
+                            <button class="lang-container" id="en">en</button>
+
+                        </div>
+                    </div>
+                  </div>
+                <div class="new-dems_0">
+                            <a id="dem-4-direct_0" href="#modal-0_0" href="#animatedModal" class="dir-cont lang" key="direc">Раздел 1</a>
+                            <a id="dem-4-direct_1" href="#" class="dir-cont lang" key="direc">Раздел 2</a>
+                </div>                        
+                <div class="new-dems_1">
+                            <a id="dem-4-direct_2" href="#" class="dir-cont lang" key="direc">Раздел 3</a>
+                            <a id="dem-4-direct_3" href="#" class="dir-cont lang" key="direc">Раздел 4</a>
+                </div>      
+            </div>
+        </div>
+      
+      
+      
+      
+      
+      <div id="modal-0_0">
+            <div  id="btn-close-modal" class="close-modal-0_0"> 
+                <center>close</center>
+            </div>
+            <div class="modal-content" style="background: #ff98db; border: 0px;">
+                <div class="container" style="height: 100%">
+                    <div class="row justify-content-center">
+                        <div class="offset-lg-4 col-lg-4">
+                            <button class="lang-container" id="ru">ru</button>
+                            <button class="lang-container" id="tat">tat</button>
+                            <button class="lang-container" id="en">en</button>
+
+                        </div>
+                    </div>
+                  </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+<!--                            text-->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="container">
+
+
+
+<div class="row baguette">
+
+         <div class="thumbnail">
+             <a class="lightbox" href="http://bootstraptema.ru/images/demo/1920x1080/demo4.jpg">
+                <img src="http://bootstraptema.ru/images/demo/1920x1080/demo4.jpg" alt="">
+             </a>
+         </div>
+
+        <div class="thumbnail">
+         <a class="lightbox" href="http://bootstraptema.ru/images/demo/1920x1080/demo5.jpg">
+            <img src="http://bootstraptema.ru/images/demo/1920x1080/demo5.jpg" alt="">
+         </a>
+        </div>
+
+</div><!-- /.row baguette -->
+</div><!-- /.container -->
+                        </div>                        
+                    </div>
+                </div>   
+            </div>
+        </div>
+      
+      
+      
+
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--    <script src="js/jquery-3.4.1.js"></script>-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script>
+//        $(document).ready(function(){
+//            $.ajax({
+//                url: 'data.json',
+//                dataType: 'json',
+//                type: 'post',
+//                cache: 'false',
+//                success: function(data){
+//                   console.log(data);
+//                }
+//            });
+//        });
+    </script>
+      
+      
+      
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: 'data.json',
+                dataType: 'json',
+                type: 'post',
+                cache: 'false',
+                success: function(data){
+                   console.log(data);
+                    var arr = data;
+                    $(".lang-container").click(function(){
+                    var lang = $(this).attr("id");
+                    $(".lang-container").attr("style", "");
+                    $(this).css("box-shadow", "0px 10px 20px 1px #333");
+                    $(".lang").each(function(index, element){
+                    $(this).text(arr[lang][$(this).attr("key")]);
+                    });
+                });
+//        Надо доделать перевод 2й, 3й и 4й страницы и загружать json, а не использовать массив
+            
+                }
+            });
+        });
+        
+        
+    </script>
+      <script src="js/animatedModal.js"></script>
+      <script>
+               $("#demo02").animatedModal({
+                    animatedIn:'lightSpeedIn',
+                    animatedOut:'bounceOutDown',
+                    color:'#3498db'
+                });
+          
+          
+          $("#dem-4-direct_0").animatedModal({
+                animatedIn:'bounceIn',
+                animatedOut:'bounceOutDown',
+                color:'#ff98db'
+            });
+          
+            baguetteBox.run('.baguette', {
+                animation: 'fadeIn',
+                noScrollbars: true
+            });
+      </script>
+      
+      
+      
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+      
+      
+      
+      
+      
+      
+      
+      
+  </body>
+</html>

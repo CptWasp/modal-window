@@ -1,0 +1,115 @@
+/*
+body{
+    width: 1920px;
+    height: 1080px;
+}
+*/
+
+.baguette {
+     margin-top: 50px;
+}
+
+.baguette .thumbnail {
+ padding: 0;
+ margin-bottom: 30px;
+ background-color: #fff;
+ border-radius: 4px;
+ border: none;
+ transition: 0.15s ease-in-out;
+ box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.baguette .thumbnail:hover {
+ transform: translateY(-10px) scale(1.02);
+}
+
+.baguette .lightbox img {
+ border-radius: 4px 4px 0 0;
+}
+
+.lightbox img{
+    height: 100%;
+    width: 100%;
+}
+
+p, a{
+    font-family: 'Roboto Mono', monospace;
+}
+#demo02{
+    padding-top: 20px;
+    min-width: 280px;
+    padding-bottom: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+    font-family: 'Raleway', monospace;
+    font-size: 1.1em;
+    border-radius: 15px;
+    background: #fff;
+    border: 0px;
+    margin-top: 15em;
+}
+#demo02:hover{
+    box-shadow: 0px 6px 12px 1px #333;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.modal_0{
+    background: #ddd;
+    height: 1080px;
+    width: 100%;
+}
+.lang-container{
+    padding: 30px;
+    display: flex;
+    float: left;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 10%;
+    border: 0px;
+    font-family: 'Raleway', monospace;
+}
+.lang-container:hover{
+    box-shadow: 0px 6px 12px 1px #333;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.new-dems_0{
+    height: 300px;
+    width: 600px;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 50%;
+    right: 350px;
+}
+.new-dems_1{
+    height: 300px;
+    width: 600px;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 50%;
+    right:  350px;
+}
+
+.dir-cont{
+    padding-top: 20px;
+    width: 280px;
+    padding-bottom: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+    font-family: 'Raleway', monospace;
+    font-size: 1.1em;
+    border-radius: 15px;
+    background: #fff;
+/*    margin-top: 20%;*/
+}
+#btn-close-modal{
+    font-family: 'Roboto', monospace;
+    font-size: 1.1em;
+}
+#btn-close-modal:hover{
+    cursor: pointer;
+    color: crimson;
+}
+.modal-content{
+    background: #ddd;
+}
